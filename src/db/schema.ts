@@ -78,7 +78,7 @@ export const testing = pgTable("testing", {
       .references(() => users.id, { onDelete: "cascade" }),
     name: text("name").notNull(),
     description: text("description"),
-    tags: text("tags").notNull(),
+    language: text("language").notNull(),
     githubRepo: text("githubRepo"),
   });
   
