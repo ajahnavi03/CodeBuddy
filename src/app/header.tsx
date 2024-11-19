@@ -50,8 +50,8 @@ function AccountDropdown(){
 export function Header(){
     const session = useSession();
     return (
-        <header className="bg-gray-100 py-2 dark:bg-gray-900 container mx-auto">
-            <div className="flex justify-between items-center">
+        <header className="bg-gray-100 py-2 dark:bg-gray-900 Z-10 relative">
+            <div className="container mx-auto flex justify-between items-center">
                 
                     <Link href="/" className="flex gap-2 items-center text-xl hover:underline">
                         <Image 
