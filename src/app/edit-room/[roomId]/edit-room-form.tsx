@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { editRoomAction } from "./actions";
 import { useParams } from "next/navigation";
 import { Room } from "@/db/schema";
-import { toast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 
 const formSchema = z.object({
@@ -28,6 +28,7 @@ const formSchema = z.object({
 });
 
 export function EditRoomForm({ room }: { room: Room }) {
+  const { toast } = useToast();
   const params = useParams();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
